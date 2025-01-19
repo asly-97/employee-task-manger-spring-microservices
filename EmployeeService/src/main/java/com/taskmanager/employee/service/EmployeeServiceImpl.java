@@ -44,15 +44,24 @@ public class EmployeeServiceImpl implements EmployeeService{
 	
 	@Override
 	public EmployeeDTO updateEmployee(long employeeId, EmployeeDTO emplyeeDto) throws TaskManagerException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Employee emp = repository.findById(employeeId)
+		.orElseThrow(EmployeeNotFoundException::new);
+		
+		emp.setName(emplyeeDto.getName());
+		emp.setDepartment(emplyeeDto.getDepartment());
+		emp.setEmail(emplyeeDto.getEmail());
+
+		repository.save(emp);
+		
+		return EmployeeDTO.prepareDTO(emp);
 	}
 
 
 	@Override
 	public long deleteEmployee(long employeeId) throws TaskManagerException {
-		// TODO Auto-generated method stub
-		return 0;
+		repository.deleteById(employeeId);
+		return employeeId;
 	}
 
 
