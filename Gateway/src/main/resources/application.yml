@@ -1,0 +1,22 @@
+server.port: 9000
+
+spring:
+  application:
+    name: gateway
+  cloud:
+   consul:
+    host: localhost
+    discovery:
+     hostname: localhost
+   
+   gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+       - id: employee-service
+         uri: lb://employee-service 
+         predicates:
+          - Path=/api/employee/**
+         filters:
+          - RewritePath=/api/(?<p>.*), /${p}
