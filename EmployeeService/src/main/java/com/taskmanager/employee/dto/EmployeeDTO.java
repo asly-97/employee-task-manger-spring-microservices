@@ -30,11 +30,9 @@ public class EmployeeDTO {
 	
 	public static Employee prepareEntity(EmployeeDTO empDto) {
 		Employee empEntity = new Employee();
-		empEntity.setId(empDto.getId());
 		empEntity.setName(empDto.getName());
 		empEntity.setDepartment(empDto.getDepartment());
 		empEntity.setEmail(empDto.getEmail());
-		empEntity.setCreatedAt(empDto.getCreatedAt());
 		
 		return empEntity;
 	}

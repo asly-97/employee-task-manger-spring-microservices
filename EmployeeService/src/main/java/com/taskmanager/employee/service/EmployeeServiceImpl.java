@@ -1,5 +1,6 @@
 package com.taskmanager.employee.service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,9 +49,17 @@ public class EmployeeServiceImpl implements EmployeeService{
 		Employee emp = repository.findById(employeeId)
 		.orElseThrow(EmployeeNotFoundException::new);
 		
-		emp.setName(emplyeeDto.getName());
-		emp.setDepartment(emplyeeDto.getDepartment());
-		emp.setEmail(emplyeeDto.getEmail());
+		if(emplyeeDto.getName() != null) {
+			emp.setName(emplyeeDto.getName());
+		}
+		
+		if(emplyeeDto.getDepartment() != null) {
+			emp.setDepartment(emplyeeDto.getDepartment());
+		}
+		
+		if(emplyeeDto.getEmail() != null) {
+			emp.setEmail(emplyeeDto.getEmail());
+		}
 
 		repository.save(emp);
 		

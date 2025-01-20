@@ -30,7 +30,7 @@ public class EmployeeController {
 		return new ResponseEntity<EmployeeDTO>(dto, HttpStatus.OK);
 	}
 	
-	@PostMapping("/")
+	@PostMapping()
 	public ResponseEntity<EmployeeDTO> addEmployee(@RequestBody EmployeeDTO emp) throws TaskManagerException {
 		EmployeeDTO dto = service.addEmployee(emp);
 		return new ResponseEntity<EmployeeDTO>(dto, HttpStatus.CREATED);

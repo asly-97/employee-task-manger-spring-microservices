@@ -1,20 +1,29 @@
 package com.taskmanager.employee.entity;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 public class Employee {
 	
 	@Id
-	private long id;
-	
-	private String name;
-	private String email;
-	private String department;
-	private LocalDateTime createdAt;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String email;
+
+    private String department;
+
+    private LocalDateTime createdAt = LocalDateTime.now();
 	
 	
 	public Employee() {
@@ -22,7 +31,6 @@ public class Employee {
 
 
 	public Employee(long id, String name, String email, String department, LocalDateTime createdAt) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
