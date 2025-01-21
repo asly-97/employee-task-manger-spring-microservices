@@ -3,3 +3,93 @@
 2025-01-21 10:32:57.196 ERROR [http-nio-6100-exec-3] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
 2025-01-21 10:34:43.421 ERROR [http-nio-6100-exec-7] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
 2025-01-21 10:37:14.286 ERROR [http-nio-6100-exec-3] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 12:58:35.728  INFO [main] com.taskmanager.employee.EmployeeServiceApplication [logStarting] - Starting EmployeeServiceApplication using Java 17.0.11 with PID 5177 (/Users/pp/InfosysWorkplace/Projects/STS Workspace/TaskManagerApp/EmployeeService/target/classes started by pp in /Users/pp/InfosysWorkplace/Projects/STS Workspace/TaskManagerApp/EmployeeService)
+2025-01-21 12:58:35.729  INFO [main] com.taskmanager.employee.EmployeeServiceApplication [logStartupProfileInfo] - No active profile set, falling back to 1 default profile: "default"
+2025-01-21 12:58:36.121  INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [registerRepositoriesIn] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-21 12:58:36.192  INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [registerRepositoriesIn] - Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interface.
+2025-01-21 12:58:36.285  INFO [main] org.springframework.cloud.context.scope.GenericScope [setSerializationId] - BeanFactory id=1d09640a-5f87-3f74-83f3-58eb1453a990
+2025-01-21 12:58:36.584  INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [initialize] - Tomcat initialized with port 6100 (http)
+2025-01-21 12:58:36.590  INFO [main] org.apache.catalina.core.StandardService [log] - Starting service [Tomcat]
+2025-01-21 12:58:36.591  INFO [main] org.apache.catalina.core.StandardEngine [log] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-21 12:58:36.615  INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log] - Initializing Spring embedded WebApplicationContext
+2025-01-21 12:58:36.615  INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [prepareWebApplicationContext] - Root WebApplicationContext: initialization completed in 870 ms
+2025-01-21 12:58:36.752  INFO [main] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-21 12:58:36.778  INFO [main] org.hibernate.Version [logVersion] - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-21 12:58:36.797  INFO [main] org.hibernate.cache.internal.RegionFactoryInitiator [initiateService] - HHH000026: Second-level cache disabled
+2025-01-21 12:58:36.904  INFO [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [addTransformer] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-21 12:58:36.918  INFO [main] com.zaxxer.hikari.HikariDataSource [getConnection] - HikariPool-1 - Starting...
+2025-01-21 12:58:37.026  INFO [main] com.zaxxer.hikari.pool.HikariPool [checkFailFast] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3140ad41
+2025-01-21 12:58:37.027  INFO [main] com.zaxxer.hikari.HikariDataSource [getConnection] - HikariPool-1 - Start completed.
+2025-01-21 12:58:37.069  INFO [main] org.hibernate.orm.connections.pooling [initiateService] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-21 12:58:37.479  INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [initiateService] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-21 12:58:37.506  INFO [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-21 12:58:37.738  WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [openEntityManagerInViewInterceptor] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-21 12:58:38.275  WARN [main] org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [afterPropertiesSet] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-01-21 12:58:38.279  INFO [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [<init>] - Exposing 1 endpoint beneath base path '/actuator'
+2025-01-21 12:58:38.334  INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [start] - Tomcat started on port 6100 (http) with context path '/'
+2025-01-21 12:58:38.335  INFO [main] org.springframework.cloud.consul.serviceregistry.ConsulServiceRegistry [register] - Registering service with consul: NewService{id='employee-service-6100', name='employee-service', tags=[], address='localhost', meta={secure=false}, port=6100, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://localhost:6100/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2025-01-21 12:58:38.371  INFO [main] com.taskmanager.employee.EmployeeServiceApplication [logStarted] - Started EmployeeServiceApplication in 2.941 seconds (process running for 3.236)
+2025-01-21 12:58:38.797  INFO [RMI TCP Connection(9)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-21 12:58:38.797  INFO [RMI TCP Connection(9)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet [initServletBean] - Initializing Servlet 'dispatcherServlet'
+2025-01-21 12:58:38.798  INFO [RMI TCP Connection(9)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet [initServletBean] - Completed initialization in 1 ms
+2025-01-21 12:59:23.298 ERROR [http-nio-6100-exec-8] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 12:59:36.211 ERROR [http-nio-6100-exec-10] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:21:11.028 ERROR [http-nio-6100-exec-10] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:21:45.616 ERROR [http-nio-6100-exec-5] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:24:47.611 ERROR [http-nio-6100-exec-4] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:26:41.476 ERROR [http-nio-6100-exec-6] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:33:34.641 ERROR [http-nio-6100-exec-8] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:33:59.769 ERROR [http-nio-6100-exec-2] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:34:23.019  INFO [RMI TCP Connection(47)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [shutdown] - Application shutdown requested.
+2025-01-21 13:34:23.050  INFO [RMI TCP Connection(47)-127.0.0.1] org.springframework.boot.web.embedded.tomcat.GracefulShutdown [shutDownGracefully] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-21 13:34:23.055  INFO [tomcat-shutdown] org.springframework.boot.web.embedded.tomcat.GracefulShutdown [doShutdown] - Graceful shutdown complete
+2025-01-21 13:34:23.062  INFO [RMI TCP Connection(47)-127.0.0.1] org.springframework.cloud.consul.serviceregistry.ConsulServiceRegistry [deregister] - Deregistering service with consul: employee-service-6100
+2025-01-21 13:34:23.077  INFO [RMI TCP Connection(47)-127.0.0.1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-21 13:34:23.085  INFO [RMI TCP Connection(47)-127.0.0.1] com.zaxxer.hikari.HikariDataSource [close] - HikariPool-1 - Shutdown initiated...
+2025-01-21 13:34:23.090  INFO [RMI TCP Connection(47)-127.0.0.1] com.zaxxer.hikari.HikariDataSource [close] - HikariPool-1 - Shutdown completed.
+2025-01-21 13:35:04.085  INFO [main] com.taskmanager.employee.EmployeeServiceApplication [logStarting] - Starting EmployeeServiceApplication using Java 17.0.11 with PID 6118 (/Users/pp/InfosysWorkplace/Projects/STS Workspace/TaskManagerApp/EmployeeService/target/classes started by pp in /Users/pp/InfosysWorkplace/Projects/STS Workspace/TaskManagerApp/EmployeeService)
+2025-01-21 13:35:04.086  INFO [main] com.taskmanager.employee.EmployeeServiceApplication [logStartupProfileInfo] - No active profile set, falling back to 1 default profile: "default"
+2025-01-21 13:35:04.483  INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [registerRepositoriesIn] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-21 13:35:04.553  INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [registerRepositoriesIn] - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2025-01-21 13:35:04.645  INFO [main] org.springframework.cloud.context.scope.GenericScope [setSerializationId] - BeanFactory id=1d09640a-5f87-3f74-83f3-58eb1453a990
+2025-01-21 13:35:04.919  INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [initialize] - Tomcat initialized with port 6100 (http)
+2025-01-21 13:35:04.925  INFO [main] org.apache.catalina.core.StandardService [log] - Starting service [Tomcat]
+2025-01-21 13:35:04.925  INFO [main] org.apache.catalina.core.StandardEngine [log] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-21 13:35:04.957  INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log] - Initializing Spring embedded WebApplicationContext
+2025-01-21 13:35:04.958  INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [prepareWebApplicationContext] - Root WebApplicationContext: initialization completed in 855 ms
+2025-01-21 13:35:05.093  INFO [main] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-21 13:35:05.118  INFO [main] org.hibernate.Version [logVersion] - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-21 13:35:05.133  INFO [main] org.hibernate.cache.internal.RegionFactoryInitiator [initiateService] - HHH000026: Second-level cache disabled
+2025-01-21 13:35:05.254  INFO [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [addTransformer] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-21 13:35:05.268  INFO [main] com.zaxxer.hikari.HikariDataSource [getConnection] - HikariPool-1 - Starting...
+2025-01-21 13:35:05.376  INFO [main] com.zaxxer.hikari.pool.HikariPool [checkFailFast] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a06b95
+2025-01-21 13:35:05.378  INFO [main] com.zaxxer.hikari.HikariDataSource [getConnection] - HikariPool-1 - Start completed.
+2025-01-21 13:35:05.420  INFO [main] org.hibernate.orm.connections.pooling [initiateService] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-21 13:35:05.778  INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [initiateService] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-21 13:35:05.805  INFO [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-21 13:35:06.034  WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [openEntityManagerInViewInterceptor] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-21 13:35:06.573  WARN [main] org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [afterPropertiesSet] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-01-21 13:35:06.577  INFO [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [<init>] - Exposing 1 endpoint beneath base path '/actuator'
+2025-01-21 13:35:06.635  INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [start] - Tomcat started on port 6100 (http) with context path '/'
+2025-01-21 13:35:06.637  INFO [main] org.springframework.cloud.consul.serviceregistry.ConsulServiceRegistry [register] - Registering service with consul: NewService{id='employee-service-6100', name='employee-service', tags=[], address='localhost', meta={secure=false}, port=6100, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://localhost:6100/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2025-01-21 13:35:06.677  INFO [main] com.taskmanager.employee.EmployeeServiceApplication [logStarted] - Started EmployeeServiceApplication in 2.892 seconds (process running for 3.191)
+2025-01-21 13:35:07.165  INFO [RMI TCP Connection(10)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-21 13:35:07.165  INFO [RMI TCP Connection(10)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet [initServletBean] - Initializing Servlet 'dispatcherServlet'
+2025-01-21 13:35:07.166  INFO [RMI TCP Connection(10)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet [initServletBean] - Completed initialization in 1 ms
+2025-01-21 13:35:13.962 ERROR [http-nio-6100-exec-3] com.taskmanager.employee.utility.LoggingAspect [logging] - Employee was not found with the given id
+2025-01-21 13:51:30.027  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool [run] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s539ms).
+2025-01-21 13:52:30.025  WARN [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool [run] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s998ms).
