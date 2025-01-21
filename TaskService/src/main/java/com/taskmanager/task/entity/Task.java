@@ -8,11 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-enum TaskStatus{
-	PENDING,
-	IN_PROGRESS,
-	COMPLETED
-}
+
 
 @Entity
 public class Task {
