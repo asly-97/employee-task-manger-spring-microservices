@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import com.taskmanager.task.client.EmployeeClient;
+import com.taskmanager.task.dto.EmployeeDTO;
 import com.taskmanager.task.dto.TaskDTO;
 import com.taskmanager.task.entity.Task;
 import com.taskmanager.task.exception.TaskManagerException;
@@ -16,6 +18,9 @@ public class TaskServiceImpl implements TaskService{
 	
 	@Autowired
 	private TaskRepository repo;
+	
+	@Autowired
+	private EmployeeClient employeeClient;
 
 	@Override
 	public TaskDTO getTask(long id) throws TaskManagerException {
@@ -31,6 +36,12 @@ public class TaskServiceImpl implements TaskService{
 	public TaskDTO addTask(TaskDTO dto) throws TaskManagerException {
 		
 		Task task = TaskDTO.prepareEntity(dto);
+		
+		EmployeeDTO empDto = employeeClient.getEmployeeById(dto.getEmployeeId());
+		
+		if(empDto == null) {
+			throw new TaskManagerException("The given employee id doesn't exists",HttpStatus.NOT_FOUND); 
+		}
 		
 		task = repo.save(task);
 		
