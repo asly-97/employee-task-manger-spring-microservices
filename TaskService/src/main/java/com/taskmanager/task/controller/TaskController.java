@@ -1,5 +1,7 @@
 package com.taskmanager.task.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +31,16 @@ public class TaskController {
 	public ResponseEntity<TaskDTO> getTaskDetails(@PathVariable long taskId) throws TaskManagerException {
 		TaskDTO dto = service.getTask(taskId);
 		return new ResponseEntity<TaskDTO>(dto, HttpStatus.OK);
+	}
+	
+	@GetMapping("/all")
+	public ResponseEntity<List<TaskDTO>> getAllTasks() throws TaskManagerException {
+		return new ResponseEntity<>(service.getAllTasks(), HttpStatus.OK);
+	}
+	
+	@GetMapping("/all/{employeeId}")
+	public ResponseEntity<List<TaskDTO>> getAllTasksByEmployeeId(@PathVariable long employeeId) throws TaskManagerException {
+		return new ResponseEntity<>(service.getTasksByEmployeeId(employeeId), HttpStatus.OK);
 	}
 	
 	@PostMapping()
