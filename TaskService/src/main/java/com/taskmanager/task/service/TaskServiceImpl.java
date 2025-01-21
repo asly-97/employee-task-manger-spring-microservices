@@ -46,9 +46,10 @@ public class TaskServiceImpl implements TaskService{
 		
 		Task task = TaskDTO.prepareEntity(dto);
 		
-		EmployeeDTO empDto = employeeClient.getEmployeeById(dto.getEmployeeId());
-		
-		if(empDto == null) {
+		try {
+			EmployeeDTO empDto = employeeClient.getEmployeeById(dto.getEmployeeId());
+		}
+		catch(Exception e) {
 			throw new TaskManagerException("The given employee id doesn't exists",HttpStatus.NOT_FOUND); 
 		}
 		

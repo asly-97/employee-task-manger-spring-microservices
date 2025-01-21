@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.taskmanager.task.dto.EmployeeDTO;
 
-@FeignClient(name= "employee-service-client", url = "lb://gateway/api")
+@FeignClient(name= "employee-service-client", url = "http://localhost:9000/api")
 public interface EmployeeClient {
 	
 	@GetMapping("/employee/{id}")

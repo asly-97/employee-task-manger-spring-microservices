@@ -40,7 +40,9 @@ public class TaskDTO {
 		
 		task.setTitle(dto.getTitle());
 		task.setDescription(dto.getDescription());
-		task.setStatus(dto.getStatus());
+		if(dto.getStatus() != null) {
+			task.setStatus(dto.getStatus());
+		}
 		task.setEmployeeId(dto.getEmployeeId());
 		
 		return task;

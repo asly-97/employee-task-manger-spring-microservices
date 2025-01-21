@@ -1,0 +1,40 @@
+
+spring:
+
+ application:
+  name: task-service
+
+ cloud:
+  consul:
+   host: localhost
+   port: 8500
+   discovery:
+    hostname: localhost
+   config:
+    enabled: true
+    prefixes: configuration
+    data-key: config-data
+    default-context: application
+    format: YAML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
