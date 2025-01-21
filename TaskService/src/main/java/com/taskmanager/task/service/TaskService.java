@@ -9,6 +9,8 @@ public interface TaskService {
 	
 	public TaskDTO getTask(long id) throws TaskManagerException;
 	
+	public List<TaskDTO> getAllTasks() throws TaskManagerException;
+	
 	public TaskDTO addTask(TaskDTO dto) throws TaskManagerException;
 	
 	public TaskDTO updateTask(long id, TaskDTO dto) throws TaskManagerException;

@@ -1,6 +1,7 @@
 package com.taskmanager.task.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,14 @@ public class TaskServiceImpl implements TaskService{
 				);
 		
 		return TaskDTO.prepareDTO(task);
+	}
+	
+	@Override
+	public List<TaskDTO> getAllTasks() throws TaskManagerException {
+		return repo.findAll()
+				.stream()
+				.map(e -> TaskDTO.prepareDTO(e))
+				.collect(Collectors.toList());
 	}
 
 	@Override
@@ -86,8 +95,10 @@ public class TaskServiceImpl implements TaskService{
 
 	@Override
 	public List<TaskDTO> getTasksByEmployeeId(long employeeId) throws TaskManagerException {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAllByEmployeeId(employeeId)
+				.stream()
+				.map(e -> TaskDTO.prepareDTO(e))
+				.collect(Collectors.toList());
 	}
 
 }
